@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento de las Aplicaciones Web</title>
+    <title>Pruebas de Aplicaciones Web</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -11,232 +14,284 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background: #f4f6f9;
+            background: #eef2f7;
             color: #333;
         }
+
         header {
-            background: linear-gradient(to right, #283E51, #4B79A1);
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             color: white;
             padding: 40px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
         }
+
         main {
             width: 85%;
             max-width: 900px;
             margin: 40px auto;
             background: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
+
         h2 {
-            color: #283E51;
-            border-left: 5px solid #4B79A1;
+            color: #0f2027;
+            border-left: 5px solid #203a43;
             padding-left: 10px;
             margin-top: 30px;
         }
+
         p, li {
             font-size: 1rem;
             line-height: 1.6;
         }
+
         ul {
             margin-left: 20px;
         }
-        fieldset {
-            border: none;
-            margin: 20px 0;
-            padding: 0;
-        }
-        legend {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .mcq {
-            background: #f7f9fc;
-            border-left: 5px solid #4B79A1;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-        }
-        .mcq label {
-            display: block;
-            margin: 6px 0;
-            cursor: pointer;
-        }
-        textarea {
-            width: 100%;
-            min-height: 100px;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            font-family: 'Poppins', sans-serif;
-        }
-        button {
-            padding: 10px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-right: 10px;
-            font-size: 15px;
-            color: white;
-        }
-        .btn-primary {
-            background: #4B79A1;
-        }
-        .btn-secondary {
-            background: #777;
-        }
-        #feedback {
-            margin-top: 15px;
-        }
-        .correct { color: green; }
-        .wrong { color: red; }
+
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            background: #283E51;
+            background: #0f2027;
             color: white;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Mantenimiento de las Aplicaciones Web</h1>
+    <h1>Pruebas de Aplicaciones Web</h1>
 </header>
 
 <main>
 
-    <h2>Introducción</h2>
-    <p>El mantenimiento de aplicaciones web es un proceso continuo que busca asegurar la disponibilidad, seguridad y correcto funcionamiento de la WebApp después de su lanzamiento. Incluye correcciones de errores, actualizaciones, mejoras y adaptación a nuevos requerimientos o tecnologías.</p>
+    <h2>¿Qué son las Pruebas de una Aplicación Web?</h2>
+    <p>
+        Las pruebas de aplicaciones web son un conjunto de procesos que permiten evaluar el 
+        funcionamiento, seguridad, rendimiento, usabilidad y compatibilidad de un sitio o 
+        plataforma desarrollada para operar en navegadores. Su objetivo es asegurar que la aplicación 
+        funcione correctamente bajo diferentes condiciones y cumpla con los requisitos del usuario.
+    </p>
 
-    <h2>Tipos de Mantenimiento</h2>
+    <h2>Importancia de las Pruebas Web</h2>
+    <p>
+        Realizar pruebas es esencial para detectar errores antes del lanzamiento, mejorar la 
+        experiencia del usuario y garantizar que la aplicación sea estable, rápida y segura. 
+        Además, ayuda a prevenir fallos que pueden afectar la confianza de los usuarios.
+    </p>
+
+    <h2>Tipos de Pruebas en Aplicaciones Web</h2>
     <ul>
-        <li><b>Correctivo:</b> Solución de errores y fallos detectados.</li>
-        <li><b>Adaptativo:</b> Ajustes a cambios en el entorno, como navegadores o sistemas operativos.</li>
-        <li><b>Perfectivo:</b> Mejora de funcionalidades y rendimiento.</li>
-        <li><b>Preventivo:</b> Acciones para prevenir problemas futuros.</li>
+        <li><b>Pruebas Funcionales:</b> Validan que cada función de la web opere según lo esperado.</li>
+        <li><b>Pruebas de Usabilidad:</b> Evalúan experiencia del usuario, navegación y accesibilidad.</li>
+        <li><b>Pruebas de Compatibilidad:</b> Se prueban navegadores, dispositivos y sistemas operativos.</li>
+        <li><b>Pruebas de Rendimiento:</b> Miden tiempo de carga, velocidad y comportamiento bajo estrés.</li>
+        <li><b>Pruebas de Seguridad:</b> Detectan vulnerabilidades como XSS, SQL Injection y fugas de datos.</li>
+        <li><b>Pruebas de Integración:</b> Revisan que los módulos funcionen bien entre sí.</li>
+        <li><b>Pruebas de Regresión:</b> Aseguran que los cambios no rompan funcionalidades previas.</li>
+        <li><b>Pruebas de Interfaz:</b> Evalúan diseño visual, coherencia, botones, formularios y enlaces.</li>
     </ul>
 
-    <h2>Preguntas de Evaluación</h2>
+    <h2>Herramientas Comunes para Pruebas Web</h2>
+    <ul>
+        <li>Selenium – automatización de pruebas funcionales</li>
+        <li>Postman – pruebas de APIs</li>
+        <li>JMeter – pruebas de rendimiento</li>
+        <li>Cypress – pruebas automatizadas modernas</li>
+        <li>Lighthouse – auditorías de rendimiento y accesibilidad</li>
+    </ul>
 
-    <form id="quizForm">
+    <h2>Proceso General de Pruebas</h2>
+    <ul>
+        <li><b>1. Análisis de requisitos</b> para definir qué se probará.</li>
+        <li><b>2. Diseño de casos de prueba</b> según funcionalidades.</li>
+        <li><b>3. Ejecución de pruebas</b> manuales o automatizadas.</li>
+        <li><b>4. Reporte de errores</b> y documentación.</li>
+        <li><b>5. Corrección por parte del equipo de desarrollo.</li>
+        <li><b>6. Repruebas</b> para verificar las correcciones.</li>
+        <li><b>7. Validación final</b> junto con el cliente o usuario.</li>
+    </ul>
 
-        <fieldset>
-            <legend>1–5. Preguntas de opción múltiple</legend>
+    <h2>Beneficios de Realizar Pruebas</h2>
+    <ul>
+        <li>Reduce errores en producción</li>
+        <li>Mejora la experiencia del usuario</li>
+        <li>Aumenta la seguridad del sistema</li>
+        <li>Optimiza tiempos de carga</li>
+        <li>Evita pérdidas de información y ataques</li>
+        <li>Garantiza calidad y confiabilidad</li>
+    </ul>
 
-            <div class="mcq" data-answer="a">
-                <p><strong>1. ¿Cuál es el objetivo principal del mantenimiento correctivo?</strong></p>
-                <label><input type="radio" name="q1" value="a"> Corregir errores y fallos detectados en la WebApp</label>
-                <label><input type="radio" name="q1" value="b"> Mejorar la experiencia del usuario</label>
-                <label><input type="radio" name="q1" value="c"> Cambiar el diseño visual</label>
-                <label><input type="radio" name="q1" value="d"> Actualizar contenido únicamente</label>
-            </div>
+<img src="https://image.slidesharecdn.com/ejemplopruebasdesoftware-150512212548-lva1-app6892/75/Ejemplo-pruebas-de-software-40-2048.jpg" width="600" height="550" alt="Imagen pequeña">   
 
-            <div class="mcq" data-answer="b">
-                <p><strong>2. ¿Qué implica el mantenimiento adaptativo?</strong></p>
-                <label><input type="radio" name="q2" value="a"> Eliminar errores de programación</label>
-                <label><input type="radio" name="q2" value="b"> Ajustar la WebApp a cambios en el entorno o tecnología</label>
-                <label><input type="radio" name="q2" value="c"> Mejorar la velocidad de carga solo</label>
-                <label><input type="radio" name="q2" value="d"> Solo actualizar el contenido del sitio</label>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preguntas — Pruebas de Aplicaciones Web</title>
+  <style>
+    :root{font-family:Inter,system-ui,'Segoe UI'}
+    body{max-width:900px;margin:32px auto;padding:20px;background:#f5f7fa;color:#111}
+    h1{font-size:1.7rem;margin-bottom:6px}
+    p.lead{margin-top:0;color:#555}
+    form{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+    fieldset{border:0;margin:14px 0;padding:0}
+    legend{font-weight:600;margin-bottom:6px}
+    .option{margin:6px 0}
+    textarea{width:100%;min-height:100px;padding:10px;border-radius:6px;border:1px solid #ccc}
+    pre{background:#0d1321;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+    .btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+    .btn-primary{background:#2563eb;color:#fff}
+    .result{margin-top:12px;padding:12px;border-radius:8px;background:#eaf3ff;color:#0b3a70}
+    .wrong{background:#ffe2e2;color:#7a0b0b;padding:6px;border-radius:6px}
+  </style>
+</head>
+<body>
+<h1>Evaluación — Pruebas de Aplicaciones Web</h1>
+<p class="lead">Responde las preguntas relacionadas con tipos de pruebas, técnicas y procesos aplicados a WebApps.</p>
 
-            <div class="mcq" data-answer="c">
-                <p><strong>3. El mantenimiento perfectivo busca:</strong></p>
-                <label><input type="radio" name="q3" value="a"> Prevenir problemas futuros</label>
-                <label><input type="radio" name="q3" value="b"> Corregir errores críticos</label>
-                <label><input type="radio" name="q3" value="c"> Mejorar funcionalidades y rendimiento</label>
-                <label><input type="radio" name="q3" value="d"> Solo cambiar diseño visual</label>
-            </div>
+<form id="quizForm" onsubmit="return false;">
 
-            <div class="mcq" data-answer="d">
-                <p><strong>4. El mantenimiento preventivo se centra en:</strong></p>
-                <label><input type="radio" name="q4" value="a"> Corregir fallos existentes</label>
-                <label><input type="radio" name="q4" value="b"> Añadir nuevas funciones obligatorias</label>
-                <label><input type="radio" name="q4" value="c"> Mejorar diseño visual únicamente</label>
-                <label><input type="radio" name="q4" value="d"> Evitar problemas antes de que ocurran</label>
-            </div>
+  <fieldset>
+    <legend>1–5. Preguntas de opción múltiple</legend>
 
-            <div class="mcq" data-answer="b">
-                <p><strong>5. ¿Qué herramienta es útil para monitorear el mantenimiento de una WebApp?</strong></p>
-                <label><input type="radio" name="q5" value="a"> Editor de texto</label>
-                <label><input type="radio" name="q5" value="b"> Sistema de seguimiento de incidencias (issue tracker)</label>
-                <label><input type="radio" name="q5" value="c"> Navegador web únicamente</label>
-                <label><input type="radio" name="q5" value="d"> Manual de usuario</label>
-            </div>
-        </fieldset>
+    <div class="mcq" data-answer="c">
+      <p><strong>1.</strong> ¿Cuál es el objetivo principal de las pruebas funcionales en una aplicación web?</p>
+      <div class="option"><input type="radio" name="q1" value="a"> Evaluar el rendimiento del servidor.</div>
+      <div class="option"><input type="radio" name="q1" value="b"> Identificar errores de seguridad.</div>
+      <div class="option"><input type="radio" name="q1" value="c"> Verificar que las funciones cumplan con los requisitos.</div>
+      <div class="option"><input type="radio" name="q1" value="d"> Medir el consumo de memoria del cliente.</div>
+    </div>
 
-        <fieldset>
-            <legend>6–7. Preguntas abiertas</legend>
+    <div class="mcq" data-answer="a">
+      <p><strong>2.</strong> Las pruebas de usabilidad se enfocan principalmente en:</p>
+      <div class="option"><input type="radio" name="q2" value="a"> La experiencia del usuario al interactuar con la WebApp.</div>
+      <div class="option"><input type="radio" name="q2" value="b"> Probar las APIs internas del sistema.</div>
+      <div class="option"><input type="radio" name="q2" value="c"> Medir el tiempo de respuesta del servidor.</div>
+      <div class="option"><input type="radio" name="q2" value="d"> Validar certificados SSL.</div>
+    </div>
 
-            <p><strong>6. Describe cómo planificarías un mantenimiento preventivo efectivo para una WebApp crítica.</strong></p>
-            <textarea name="open1"></textarea>
+    <div class="mcq" data-answer="d">
+      <p><strong>3.</strong> ¿Qué tipo de prueba se realiza para evaluar cómo se comporta la aplicación web bajo tráfico elevado?</p>
+      <div class="option"><input type="radio" name="q3" value="a"> Pruebas unitarias.</div>
+      <div class="option"><input type="radio" name="q3" value="b"> Pruebas A/B.</div>
+      <div class="option"><input type="radio" name="q3" value="c"> Pruebas de inspección.</div>
+      <div class="option"><input type="radio" name="q3" value="d"> Pruebas de carga.</div>
+    </div>
 
-            <p><strong>7. Explica cómo priorizarías las tareas de mantenimiento correctivo, adaptativo y perfectivo en un proyecto real.</strong></p>
-            <textarea name="open2"></textarea>
-        </fieldset>
+    <div class="mcq" data-answer="b">
+      <p><strong>4.</strong> ¿Cuál de los siguientes es un ejemplo de prueba no funcional?</p>
+      <div class="option"><input type="radio" name="q4" value="a"> Validación de un formulario.</div>
+      <div class="option"><input type="radio" name="q4" value="b"> Medición del tiempo de respuesta.</div>
+      <div class="option"><input type="radio" name="q4" value="c"> Verificación del inicio de sesión.</div>
+      <div class="option"><input type="radio" name="q4" value="d"> Comprobación de enlaces rotos.</div>
+    </div>
 
-        <fieldset>
-            <legend>8. Mini caso práctico</legend>
-            <p><strong>Contexto:</strong> Una WebApp de gestión de clientes presenta errores intermitentes y tiempos de respuesta lentos en horas pico.</p>
-            <p><strong>Tarea:</strong> Propón un plan de mantenimiento que incluya: 1) acciones correctivas y preventivas, 2) métricas a monitorear, 3) criterios de éxito.</p>
-            <textarea name="caseAnswer"></textarea>
-        </fieldset>
+    <div class="mcq" data-answer="c">
+      <p><strong>5.</strong> ¿Qué herramienta es común para realizar pruebas automatizadas en aplicaciones web?</p>
+      <div class="option"><input type="radio" name="q5" value="a"> Photoshop.</div>
+      <div class="option"><input type="radio" name="q5" value="b"> AutoCAD.</div>
+      <div class="option"><input type="radio" name="q5" value="c"> Selenium.</div>
+      <div class="option"><input type="radio" name="q5" value="d"> VirtualBox.</div>
+    </div>
 
-        <button type="button" class="btn-primary" onclick="evaluateMCQs()">Evaluar</button>
-        <button type="button" class="btn-secondary" onclick="resetForm()">Reiniciar</button>
+  </fieldset>
 
-        <div id="feedback"></div>
-    </form>
+  <fieldset>
+    <legend>6–7. Preguntas abiertas</legend>
 
-    <a href="index.html">
-        <button>⟵ Regresar</button>
-    </a>
+    <p><strong>6.</strong> Explica la diferencia entre pruebas funcionales y pruebas no funcionales en aplicaciones web.</p>
+    <textarea></textarea>
+
+    <p><strong>7.</strong> Menciona tres pruebas esenciales que se deben realizar antes de lanzar una aplicación web al público.</p>
+    <textarea></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>8. Mini caso práctico</legend>
+
+    <p><strong>Contexto:</strong> Una tienda en línea reporta que durante el Buen Fin su sitio se volvió lento, algunos carritos no se actualizaban y clientes no pudieron completar pagos.</p>
+
+    <p><strong>Tarea:</strong> En máximo 10 líneas, redacta un plan de pruebas que permita identificar los problemas antes de un evento de alto tráfico.</p>
+
+    <pre>// Ejemplo editable:
+// Incluir pruebas de carga, estrés y concurrencia.
+// Probar integraciones de pago y actualización del carrito.
+// Establecer límites aceptables de rendimiento.</pre>
+
+    <textarea placeholder="Escribe tu plan aquí..."></textarea>
+  </fieldset>
+
+  <button class="btn btn-primary" onclick="evaluateMCQs()">Evaluar</button>
+  <button class="btn" type="button" onclick="resetForm()">Reiniciar</button>
+
+  <div id="feedback"></div>
+</form>
+
+<script>
+function evaluateMCQs(){
+  const mcqs=document.querySelectorAll('.mcq');
+  let correct=0;
+  const fb=document.getElementById('feedback');
+  fb.innerHTML='';
+
+  mcqs.forEach((q,i)=>{
+    const ans=q.dataset.answer;
+    const chosen=q.querySelector('input:checked');
+    const p=document.createElement('p');
+    if(chosen && chosen.value===ans){correct++;p.textContent=`Pregunta ${i+1}: correcta.`}
+    else{p.textContent=`Pregunta ${i+1}: incorrecta.`;p.className='wrong'}
+    fb.appendChild(p);
+  });
+
+  const r=document.createElement('div');
+  r.className='result';
+  r.textContent=`Resultado: ${correct}/${mcqs.length} correctas.`;
+  fb.prepend(r);
+}
+
+function resetForm(){
+  document.getElementById('quizForm').reset();
+  document.getElementById('feedback').innerHTML='';
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+<a href="index.html">
+    <button>⟵ Regresar</button>
+</a>
+
+
+
+
+
 
 </main>
+
+
 
 <footer>
     © 2025 - TECNM CONKAL
 </footer>
 
-<script>
-function evaluateMCQs(){
-    const mcqs = document.querySelectorAll('.mcq');
-    let correct = 0;
-    const fb = document.getElementById('feedback');
-    fb.innerHTML = '';
-
-    mcqs.forEach((q, i) => {
-        const answer = q.getAttribute('data-answer');
-        const chosen = q.querySelector('input:checked');
-        const p = document.createElement('p');
-        if(chosen && chosen.value === answer){
-            correct++;
-            p.textContent = `Pregunta ${i+1}: correcta.`;
-            p.className = 'correct';
-        } else {
-            p.textContent = `Pregunta ${i+1}: incorrecta.`;
-            p.className = 'wrong';
-        }
-        fb.appendChild(p);
-    });
-
-    const r = document.createElement('h3');
-    r.textContent = `Resultado final: ${correct}/${mcqs.length} correctas.`;
-    fb.prepend(r);
-}
-
-function resetForm(){
-    document.getElementById('quizForm').reset();
-    document.getElementById('feedback').innerHTML = '';
-}
-</script>
-
 </body>
 </html>
+</body>
+</html>
+
