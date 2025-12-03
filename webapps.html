@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento de Aplicaciones Web</title>
+    <title>Ejemplos de Pruebas para WebApps</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -14,17 +17,20 @@
             background: #f4f6f9;
             color: #333;
         }
+
         header {
-            background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+            background: linear-gradient(to right, #283E51, #4B79A1);
             color: white;
             padding: 40px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
         }
+
         main {
             width: 85%;
             max-width: 900px;
@@ -34,24 +40,87 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
+
         h2 {
-            color: #0F2027;
-            border-left: 5px solid #203A43;
+            color: #283E51;
+            border-left: 5px solid #4B79A1;
             padding-left: 10px;
             margin-top: 30px;
         }
+
         p, li {
             font-size: 1rem;
             line-height: 1.6;
         }
+
         ul {
             margin-left: 20px;
         }
+
+        fieldset {
+            border: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        legend {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .mcq {
+            background: #f7f9fc;
+            border-left: 5px solid #4B79A1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .mcq label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+            color: white;
+        }
+
+        .btn-primary {
+            background: #4B79A1;
+        }
+
+        .btn-secondary {
+            background: #777;
+        }
+
+        #feedback {
+            margin-top: 15px;
+        }
+
+        .correct { color: green; }
+        .wrong { color: red; }
+
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            background: #0F2027;
+            background: #283E51;
             color: white;
         }
     </style>
@@ -59,28 +128,153 @@
 <body>
 
 <header>
-    <h1>Mantenimiento de Aplicaciones Web</h1>
+    <h1>Ejemplos de Pruebas para WebApps</h1>
 </header>
 
 <main>
-    <h2>Introducción</h2>
-    <p>El mantenimiento de una aplicación web consiste en las tareas que se realizan después de su implementación para asegurar su funcionamiento correcto, seguro y eficiente.</p>
 
-    <h2>Tipos de Mantenimiento</h2>
+    <h2>Introducción</h2>
+    <p>Las pruebas de aplicaciones web son esenciales para garantizar la calidad, funcionalidad y seguridad de un sistema. 
+    Existen diferentes tipos de pruebas, como funcionales, de usabilidad, rendimiento, compatibilidad y seguridad. 
+    A continuación se presentan ejemplos prácticos y preguntas de evaluación para reforzar el aprendizaje.</p>
+
+    <h2>Ejemplos de Pruebas</h2>
     <ul>
-        <li><b>Correctivo:</b> Resolver fallos o errores detectados en la WebApp.</li>
-        <li><b>Adaptativo:</b> Actualizar la aplicación conforme cambian los entornos tecnológicos.</li>
-        <li><b>Perfectivo:</b> Mejorar características, rendimiento o experiencia de usuario.</li>
-        <li><b>Preventivo:</b> Evitar problemas futuros mediante revisiones continuas.</li>
+        <li><b>Prueba funcional:</b> Verificar que un formulario envía datos correctamente y guarda en la base de datos.</li>
+        <li><b>Prueba de usabilidad:</b> Comprobar que los usuarios puedan navegar intuitivamente por la aplicación.</li>
+        <li><b>Prueba de rendimiento:</b> Medir tiempo de respuesta y carga bajo diferentes cantidades de usuarios.</li>
+        <li><b>Prueba de compatibilidad:</b> Asegurar que la aplicación funcione en Chrome, Firefox, Safari y móviles.</li>
+        <li><b>Prueba de seguridad:</b> Evaluar que el login y los datos estén protegidos frente a ataques externos.</li>
     </ul>
 
-    <h2>Importancia</h2>
-    <p>Un adecuado mantenimiento garantiza mayor seguridad, estabilidad y durabilidad de una WebApp en producción.</p>
+
+<img src="https://image.slidesharecdn.com/pruebasdeaplicacionesweb-110628190933-phpapp01/75/Pruebas-de-aplicaciones-web-10-2048.jpg" alt="Flujo de pruebas WebApp" width="800" height="800">
+
+
+    <h2>Preguntas de Evaluación</h2>
+
+    <form id="quizForm">
+
+        <fieldset>
+            <legend>1–5. Preguntas de opción múltiple</legend>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>1. ¿Cuál de los siguientes es un ejemplo de prueba funcional?</strong></p>
+                <label><input type="radio" name="q1" value="a"> Verificar envío de formulario correctamente</label>
+                <label><input type="radio" name="q1" value="b"> Medir el tiempo de carga del servidor</label>
+                <label><input type="radio" name="q1" value="c"> Evaluar navegabilidad de usuarios</label>
+                <label><input type="radio" name="q1" value="d"> Probar compatibilidad con navegadores</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>2. Ejemplo de prueba de usabilidad:</strong></p>
+                <label><input type="radio" name="q2" value="a"> Medir tiempo de respuesta</label>
+                <label><input type="radio" name="q2" value="b"> Probar ataques SQL Injection</label>
+                <label><input type="radio" name="q2" value="c"> Evaluar si los usuarios pueden navegar sin confundirse</label>
+                <label><input type="radio" name="q2" value="d"> Comprobar compatibilidad con navegadores</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>3. ¿Cuál prueba corresponde a seguridad?</strong></p>
+                <label><input type="radio" name="q3" value="a"> Verificar tiempos de carga</label>
+                <label><input type="radio" name="q3" value="b"> Probar formularios funcionales</label>
+                <label><input type="radio" name="q3" value="c"> Comprobar compatibilidad móvil</label>
+                <label><input type="radio" name="q3" value="d"> Evaluar login y protección de datos</label>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>4. Prueba de rendimiento evalúa:</strong></p>
+                <label><input type="radio" name="q4" value="a"> Tiempo de respuesta y carga de usuarios</label>
+                <label><input type="radio" name="q4" value="b"> Experiencia de usuario</label>
+                <label><input type="radio" name="q4" value="c"> Compatibilidad de navegadores</label>
+                <label><input type="radio" name="q4" value="d"> Seguridad de login</label>
+            </div>
+
+
+
+            <div class="mcq" data-answer="b">
+                <p><strong>5. Ejemplo de prueba de compatibilidad:</strong></p>
+                <label><input type="radio" name="q5" value="a"> Revisar carga del servidor</label>
+                <label><input type="radio" name="q5" value="b"> Probar la WebApp en Chrome, Firefox y Safari</label>
+                <label><input type="radio" name="q5" value="c"> Medir latencia</label>
+                <label><input type="radio" name="q5" value="d"> Validar cierre de base de datos</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6–7. Preguntas abiertas</legend>
+
+            <p><strong>6. Describe en 5 líneas cómo realizarías una prueba de rendimiento para una WebApp.</strong></p>
+            <textarea name="open1" placeholder="Escribe tu respuesta aquí..."></textarea>
+
+            <p><strong>7. Explica cómo integrar pruebas automáticas y manuales en una estrategia de pruebas web.</strong></p>
+            <textarea name="open2" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>8. Mini caso práctico</legend>
+            <p><strong>Contexto:</strong> Una WebApp de comercio electrónico tiene lentitud en la página de checkout con muchos usuarios simultáneos.</p>
+            <p><strong>Tarea:</strong> Proponer un plan de prueba que incluya: 1) prueba concreta para reproducir la lentitud, 2) métricas a registrar, 3) criterios de éxito.</p>
+            <textarea name="caseAnswer" placeholder="Escribe tu plan aquí (máx. 10 líneas)"></textarea>
+        </fieldset>
+
+        <button type="button" class="btn btn-primary" onclick="evaluateMCQs()">Evaluar</button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">Reiniciar</button>
+
+        <div id="feedback"></div>
+
+
+
+
+    </form>
+
+<a href="index.html">
+    <button>⟵ Regresar</button>
+</a>
+
+
 </main>
 
 <footer>
-    © 2025
+    © 2025 - TECNM CONKAL
 </footer>
+
+<script>
+function evaluateMCQs(){
+    const mcqs = document.querySelectorAll('.mcq');
+    let correct = 0;
+    const fb = document.getElementById('feedback');
+    fb.innerHTML = '';
+
+    mcqs.forEach((q, i) => {
+        const answer = q.getAttribute('data-answer');
+        const chosen = q.querySelector('input:checked');
+        const p = document.createElement('p');
+        if(chosen && chosen.value === answer){
+            correct++;
+            p.textContent = `Pregunta ${i+1}: correcta.`;
+            p.className = 'correct';
+        } else {
+            p.textContent = `Pregunta ${i+1}: incorrecta.`;
+            p.className = 'wrong';
+        }
+        fb.appendChild(p);
+    });
+
+    const r = document.createElement('h3');
+    r.textContent = `Resultado final: ${correct}/${mcqs.length} correctas.`;
+    fb.prepend(r);
+}
+
+function resetForm(){
+    document.getElementById('quizForm').reset();
+    document.getElementById('feedback').innerHTML = '';
+}
+</script>
+
+
+
+
 
 </body>
 </html>
