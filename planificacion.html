@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificación de la Verificación y Validación de Aplicaciones Web</title>
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -17,6 +19,7 @@
         }
 
         header {
+            background: #4B79A1;
             background: linear-gradient(to right, #283E51, #4B79A1);
             color: white;
             padding: 40px;
@@ -60,17 +63,6 @@
             background: #283E51;
             color: white;
         }
-
-        button {
-            padding: 10px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 10px;
-            font-size: 15px;
-            color: white;
-            background: #4B79A1;
-        }
     </style>
 
 </head>
@@ -110,7 +102,7 @@
         <li>Pruebas funcionales</li>
         <li>Pruebas de usabilidad</li>
         <li>Pruebas de compatibilidad</li>
-        <li>Pruebas de rendimiento</li>
+        <li>Pruebas de rendimiento (carga y estrés)</li>
         <li>Pruebas de seguridad</li>
         <li>Pruebas de integración</li>
         <li>Pruebas de regresión</li>
@@ -133,112 +125,226 @@
         <li>Mejor experiencia del usuario</li>
         <li>Reducción de costos de mantenimiento</li>
         <li>Mayor calidad y confiabilidad</li>
+
+
     </ul>
 
-    <img src="https://qalified.com/wp-content/uploads/2024/12/Mejores-practicas-para-un-plan-de-pruebas-de-software.webp" width="600" height="350">
+<img src="https://qalified.com/wp-content/uploads/2024/12/Mejores-practicas-para-un-plan-de-pruebas-de-software.webp" width="600" height="350" alt="Imagen pequeña">   
 
-    <h1>Evaluación — Planificación V&V</h1>
 
-    <form id="quizForm" onsubmit="return false;">
-        <fieldset>
-            <legend>1–5. Preguntas de opción múltiple</legend>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preguntas — Planificación V&V de Aplicaciones Web</title>
+  <style>
+    :root{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{max-width:900px;margin:32px auto;padding:20px;background:#f7f7fb;color:#111}
+    h1{font-size:1.6rem;margin-bottom:6px}
+    p.lead{margin-top:0;color:#444}
+    form{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(20,20,50,0.06)}
+    fieldset{border:0;margin:12px 0;padding:0}
+    legend{font-weight:600;margin-bottom:8px}
+    .option{margin:6px 0}
+    label{cursor:pointer}
+    textarea{width:100%;min-height:100px;padding:8px;border-radius:6px;border:1px solid #ddd}
+    pre{background:#0b1220;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+    .btn-primary{background:#2563eb;color:#fff}
+    .result{margin-top:14px;padding:12px;border-radius:8px;background:#eef6ff;color:#08306a}
+    .wrong{background:#fff2f2;color:#6b0b0b}
+  </style>
+</head>
+<body>
+  <h1>Evaluación — Planificación de Verificación y Validación (V&amp;V) de Aplicaciones Web</h1>
+  <p class="lead">Contesta las 5 preguntas de opción múltiple, responde las 2 preguntas abiertas y resuelve el mini caso práctico. Pulsa <strong>Evaluar</strong> para obtener retroalimentación automática en las preguntas de opción múltiple.</p>
 
-            <div class="mcq" data-answer="b">
-                <p><strong>1.</strong> ¿Cuál es el objetivo principal de la fase de verificación?</p>
-                <input type="radio" name="q1" value="a"> Comprobar requisitos reales<br>
-                <input type="radio" name="q1" value="b"> Asegurar que se construyó correctamente<br>
-                <input type="radio" name="q1" value="c"> Medir rendimiento<br>
-                <input type="radio" name="q1" value="d"> Pruebas con clientes<br>
-            </div>
+  <form id="quizForm" onsubmit="return false;">
 
-            <div class="mcq" data-answer="c">
-                <p><strong>2.</strong> ¿Qué documento describe casos de prueba y criterios?</p>
-                <input type="radio" name="q2" value="a"> Gantt<br>
-                <input type="radio" name="q2" value="b"> Arquitectura<br>
-                <input type="radio" name="q2" value="c"> Plan de pruebas<br>
-                <input type="radio" name="q2" value="d"> Manual de usuario<br>
-            </div>
+    <fieldset>
+      <legend>1–5. Preguntas de opción múltiple</legend>
 
-            <div class="mcq" data-answer="a">
-                <p><strong>3.</strong> Actividad de validación:</p>
-                <input type="radio" name="q3" value="a"> Pruebas con usuarios reales<br>
-                <input type="radio" name="q3" value="b"> Revisión de código<br>
-                <input type="radio" name="q3" value="c"> Documentación técnica<br>
-                <input type="radio" name="q3" value="d"> Configurar el servidor<br>
-            </div>
+      <div id="mcqList">
+        <div class="mcq" data-answer="b">
+          <p><strong>1.</strong> ¿Cuál es el objetivo principal de la fase de verificación en el contexto de aplicaciones web?</p>
+          <div class="option"><input type="radio" id="q1a" name="q1" value="a"><label for="q1a"> a) Comprobar que el sistema cumple requisitos de negocio reales con usuarios finales.</label></div>
+          <div class="option"><input type="radio" id="q1b" name="q1" value="b"><label for="q1b"> b) Asegurar que el software se construyó correctamente según especificaciones y diseño.</label></div>
+          <div class="option"><input type="radio" id="q1c" name="q1" value="c"><label for="q1c"> c) Medir el rendimiento en producción únicamente.</label></div>
+          <div class="option"><input type="radio" id="q1d" name="q1" value="d"><label for="q1d"> d) Realizar pruebas de usabilidad con clientes externos.</label></div>
+        </div>
 
-            <div class="mcq" data-answer="d">
-                <p><strong>4.</strong> Prueba para resistencia a tráfico inesperado:</p>
-                <input type="radio" name="q4" value="a"> Unitarias<br>
-                <input type="radio" name="q4" value="b"> Accesibilidad<br>
-                <input type="radio" name="q4" value="c"> Integración<br>
-                <input type="radio" name="q4" value="d"> Carga y estrés<br>
-            </div>
+        <div class="mcq" data-answer="c">
+          <p><strong>2.</strong> En la planificación de V&amp;V, ¿qué artefacto describe casos de prueba, criterios de aceptación y criterios de salida?</p>
+          <div class="option"><input type="radio" id="q2a" name="q2" value="a"><label for="q2a"> a) Diagrama de Gantt.</label></div>
+          <div class="option"><input type="radio" id="q2b" name="q2" value="b"><label for="q2b"> b) Documento de arquitectura.</label></div>
+          <div class="option"><input type="radio" id="q2c" name="q2" value="c"><label for="q2c"> c) Plan de pruebas (Test Plan) / Plan de verificación y validación.</label></div>
+          <div class="option"><input type="radio" id="q2d" name="q2" value="d"><label for="q2d"> d) Manual de usuario.</label></div>
+        </div>
 
-            <div class="mcq" data-answer="b">
-                <p><strong>5.</strong> Métrica útil para medir eficacia del testing:</p>
-                <input type="radio" name="q5" value="a"> Commits<br>
-                <input type="radio" name="q5" value="b"> Cobertura de pruebas<br>
-                <input type="radio" name="q5" value="c"> Tamaño BD<br>
-                <input type="radio" name="q5" value="d"> Número de pantallas<br>
-            </div>
-        </fieldset>
+        <div class="mcq" data-answer="a">
+          <p><strong>3.</strong> ¿Cuál de las siguientes actividades se asocia típicamente a la validación?</p>
+          <div class="option"><input type="radio" id="q3a" name="q3" value="a"><label for="q3a"> a) Pruebas con usuarios reales para confirmar que el producto satisface necesidades del negocio.</label></div>
+          <div class="option"><input type="radio" id="q3b" name="q3" value="b"><label for="q3b"> b) Revisión de código estático por parte del equipo de desarrollo solamente.</label></div>
+          <div class="option"><input type="radio" id="q3c" name="q3" value="c"><label for="q3c"> c) Generación de documentación técnica interna.</label></div>
+          <div class="option"><input type="radio" id="q3d" name="q3" value="d"><label for="q3d"> d) Actualizar la configuración del servidor.</label></div>
+        </div>
 
-        <fieldset>
-            <legend>6–7. Preguntas abiertas</legend>
-            <textarea id="open1"></textarea>
-            <textarea id="open2"></textarea>
-        </fieldset>
+        <div class="mcq" data-answer="d">
+          <p><strong>4.</strong> En un plan V&amp;V de una WebApp, ¿qué prueba es la más indicada para evaluar la resistencia frente a tráfico inesperado?</p>
+          <div class="option"><input type="radio" id="q4a" name="q4" value="a"><label for="q4a"> a) Pruebas unitarias.</label></div>
+          <div class="option"><input type="radio" id="q4b" name="q4" value="b"><label for="q4b"> b) Pruebas de accesibilidad.</label></div>
+          <div class="option"><input type="radio" id="q4c" name="q4" value="c"><label for="q4c"> c) Pruebas de integración.</label></div>
+          <div class="option"><input type="radio" id="q4d" name="q4" value="d"><label for="q4d"> d) Pruebas de carga y estrés (performance testing).</label></div>
+        </div>
 
-        <fieldset>
-            <legend>8. Mini caso práctico</legend>
-            <textarea id="caseAnswer"></textarea>
-        </fieldset>
+        <div class="mcq" data-answer="b">
+          <p><strong>5.</strong> ¿Qué métrica es más útil para medir la eficacia del proceso de pruebas en una aplicación web?</p>
+          <div class="option"><input type="radio" id="q5a" name="q5" value="a"><label for="q5a"> a) Número de commits en el repositorio.</label></div>
+          <div class="option"><input type="radio" id="q5b" name="q5" value="b"><label for="q5b"> b) Cobertura de pruebas (porcentaje de casos / líneas ejecutadas durante tests).</label></div>
+          <div class="option"><input type="radio" id="q5c" name="q5" value="c"><label for="q5c"> c) Tamaño de la base de datos en MB.</label></div>
+          <div class="option"><input type="radio" id="q5d" name="q5" value="d"><label for="q5d"> d) Número de pantallas en la aplicación.</label></div>
+        </div>
 
-        <button onclick="evaluateMCQs()">Evaluar</button>
-        <button type="button" onclick="resetForm()">Reiniciar</button>
+      </div>
+    </fieldset>
 
-        <div id="feedback"></div>
-    </form>
+    <fieldset>
+      <legend>6–7. Preguntas abiertas</legend>
+
+      <div>
+        <p><strong>6.</strong> Describe, en no más de 6 líneas, los pasos principales para planificar la estrategia de pruebas de seguridad (Vulnerabilidades y autenticación) en una aplicación web.</p>
+        <textarea id="open1" name="open1" placeholder="Escribe tu respuesta aquí..."></textarea>
+      </div>
+
+      <div style="margin-top:12px">
+        <p><strong>7.</strong> Explica cómo integrar pruebas automáticas (CI) con pruebas manuales en la planificación de V&amp;V para garantizar cobertura y rapidez. Menciona al menos 3 acciones concretas.</p>
+        <textarea id="open2" name="open2" placeholder="Escribe tu respuesta aquí..."></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>8. Mini caso práctico</legend>
+
+      <p><strong>Contexto:</strong> Una WebApp de comercio electrónico presenta cierres inesperados en el checkout cuando el tráfico sube. El cliente solicita un plan de verificación y validación que permita localizar la causa y garantizar la corrección en 3 etapas: detectar, corregir y validar.</p>
+
+      <p><strong>Tarea:</strong> En el espacio de código que aparece abajo, escribe un pequeño plan (máx. 10 líneas) que incluya: 1) una prueba concreta para reproducir el fallo, 2) métricas a recopilar, 3) criterios para considerar la corrección como válida.</p>
+
+      <pre id="caseSample">// Escribe aquí tu plan (puedes editar este ejemplo):
+// 1) Reproducir checkout simultáneo con 500 usuarios virtuales utilizando JMeter.
+// 2) Recopilar: tasa de errores 5xx, latencia p95, uso CPU y memoria del servidor, timeouts DB.
+// 3) Criterio de corrección: tasa de errores < 0.5% y p95 de latencia < 2s bajo la misma carga.
+</pre>
+
+      <p>Escribe tu plan final debajo:</p>
+      <textarea id="caseAnswer" name="caseAnswer" placeholder="Escribe tu plan aquí (máx. 10 líneas)"></textarea>
+    </fieldset>
+
+    <div style="margin-top:14px">
+      <button class="btn btn-primary" id="evalBtn" onclick="evaluateMCQs()">Evaluar</button>
+      <button class="btn" onclick="resetForm()" type="button">Reiniciar</button>
+    </div>
+
+    <div id="feedback" aria-live="polite"></div>
+  </form>
+
+  <script>
+    function evaluateMCQs(){
+      const mcqs = document.querySelectorAll('.mcq');
+      let correct = 0;
+      let total = mcqs.length;
+      let details = [];
+
+      mcqs.forEach((node, idx) => {
+        const answer = node.getAttribute('data-answer');
+        const qname = 'q' + (idx+1);
+        const chosenEl = document.querySelector('input[name="'+qname+'"]:checked');
+        const chosen = chosenEl ? chosenEl.value : null;
+        if(chosen === answer){ correct++; details.push({q: idx+1, ok:true}); }
+        else { details.push({q: idx+1, ok:false, chosen:chosen}); }
+      });
+
+      const scorePct = Math.round((correct/total)*100);
+      const fb = document.getElementById('feedback');
+      fb.innerHTML = '';
+
+      const resultBox = document.createElement('div');
+      resultBox.className = 'result';
+      resultBox.innerHTML = '<strong>Resultados:</strong> ' + correct + '/' + total + ' correctas ('+scorePct+'%).';
+      fb.appendChild(resultBox);
+
+      // Detalle por pregunta
+      details.forEach(d=>{
+        const p = document.createElement('p');
+        if(d.ok){ p.textContent = 'Pregunta ' + d.q + ': correcta.'; }
+        else{
+          p.className = 'wrong';
+          p.textContent = 'Pregunta ' + d.q + ': incorrecta. Revisa la definición de verificación vs validación, tipos de pruebas y métricas.';
+        }
+        fb.appendChild(p);
+      });
+
+      // Mostrar sugerencia breve
+      const hint = document.createElement('p');
+      hint.style.marginTop = '8px';
+      hint.innerHTML = '<em>Sugerencia:</em> repasa el Plan de Pruebas y los criterios de aceptación (exit criteria) para entender por qué cada respuesta es correcta.';
+      fb.appendChild(hint);
+    }
+
+    function resetForm(){
+      document.getElementById('quizForm').reset();
+      document.getElementById('feedback').innerHTML = '';
+      document.getElementById('caseAnswer').value = '';
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <a href="index.html">
     <button>⟵ Regresar</button>
 </a>
 
+
+
+<a href="inspeccion.html">
+    <button> ⟶ Siguiente</button>
+</a>
+
+
+
+
+
 <footer>
     © 2025 - TECNM CONKAL
 </footer>
-
-<script>
-function evaluateMCQs(){
-    const mcqs = document.querySelectorAll('.mcq');
-    let correct = 0;
-    let fb = document.getElementById('feedback');
-    fb.innerHTML = '';
-
-    mcqs.forEach((q, i) => {
-        const answer = q.getAttribute('data-answer');
-        const chosen = q.querySelector('input:checked');
-        const p = document.createElement('p');
-        if(chosen && chosen.value === answer){
-            correct++;
-            p.textContent = "Pregunta " + (i+1) + ": correcta.";
-        } else {
-            p.textContent = "Pregunta " + (i+1) + ": incorrecta.";
-        }
-        fb.appendChild(p);
-    });
-
-    fb.innerHTML = "<h3>Resultado: " + correct + "/" + mcqs.length + "</h3>" + fb.innerHTML;
-}
-
-function resetForm(){
-    document.getElementById('quizForm').reset();
-    document.getElementById('feedback').innerHTML = '';
-}
-</script>
 
 </body>
 </html>
