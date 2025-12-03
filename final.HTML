@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Integral — V&V de WebApps</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #283E51, #4B79A1);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+        }
+
+        main {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #283E51;
+            border-left: 5px solid #4B79A1;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        fieldset {
+            border: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        legend {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .mcq, .analysis {
+            background: #f7f9fc;
+            border-left: 5px solid #4B79A1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .mcq label, .analysis label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+            color: white;
+        }
+
+        .btn-primary { background: #4B79A1; }
+        .btn-secondary { background: #777; }
+
+        #feedback { margin-top: 15px; }
+        .correct { color: green; }
+        .wrong { color: red; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #283E51;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Evaluación Integral — V&V de WebApps</h1>
+</header>
+
+<main>
+    <h2>Instrucciones</h2>
+    <p>Responde las 15 preguntas de opción múltiple, las 5 preguntas de análisis y realiza el caso integrador tipo auditoría de V&V para una WebApp.</p>
+
+    <form id="quizForm">
+
+        <fieldset>
+            <legend>1–15. Preguntas de opción múltiple</legend>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>1. En la planificación de V&V, ¿qué documento describe los criterios de aceptación?</strong></p>
+                <label><input type="radio" name="q1" value="a"> Plan de pruebas / Plan de verificación y validación</label>
+                <label><input type="radio" name="q1" value="b"> Manual de usuario</label>
+                <label><input type="radio" name="q1" value="c"> Diagrama de Gantt</label>
+                <label><input type="radio" name="q1" value="d"> Documento de arquitectura</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>2. ¿Qué actividad corresponde a la inspección de software?</strong></p>
+                <label><input type="radio" name="q2" value="a"> Pruebas de carga</label>
+                <label><input type="radio" name="q2" value="b"> Revisión de código y documentación</label>
+                <label><input type="radio" name="q2" value="c"> Simulación de usuarios</label>
+                <label><input type="radio" name="q2" value="d"> Implementación de funcionalidades nuevas</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>3. ¿Cuál es un ejemplo de prueba funcional en WebApps?</strong></p>
+                <label><input type="radio" name="q3" value="a"> Medir tiempos de carga</label>
+                <label><input type="radio" name="q3" value="b"> Prueba de compatibilidad de navegadores</label>
+                <label><input type="radio" name="q3" value="c"> Verificar que un formulario envía datos correctamente</label>
+                <label><input type="radio" name="q3" value="d"> Evaluar experiencia del usuario</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>4. Una prueba de rendimiento se centra en:</strong></p>
+                <label><input type="radio" name="q4" value="a"> Diseño visual</label>
+                <label><input type="radio" name="q4" value="b"> Seguridad de datos</label>
+                <label><input type="radio" name="q4" value="c"> Usabilidad</label>
+                <label><input type="radio" name="q4" value="d"> Capacidad de soportar carga y velocidad de respuesta</label>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>5. Durante la implementación de WebApps, ¿qué es esencial?</strong></p>
+                <label><input type="radio" name="q5" value="a"> Configuración correcta de servidores y despliegue de código</label>
+                <label><input type="radio" name="q5" value="b"> Solo diseñar interfaces</label>
+                <label><input type="radio" name="q5" value="c"> Escribir manuales</label>
+                <label><input type="radio" name="q5" value="d"> Nada de lo anterior</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>6. ¿Qué se evalúa en la fase de evaluación de WebApps?</strong></p>
+                <label><input type="radio" name="q6" value="a"> Solo la estética visual</label>
+                <label><input type="radio" name="q6" value="b"> Funcionalidad, rendimiento, seguridad y usabilidad</label>
+                <label><input type="radio" name="q6" value="c"> Solo la velocidad de carga</label>
+                <label><input type="radio" name="q6" value="d"> Documentación interna</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>7. Mantenimiento correctivo significa:</strong></p>
+                <label><input type="radio" name="q7" value="a"> Evitar problemas futuros</label>
+                <label><input type="radio" name="q7" value="b"> Mejorar la interfaz de usuario</label>
+                <label><input type="radio" name="q7" value="c"> Corregir errores y fallos detectados</label>
+                <label><input type="radio" name="q7" value="d"> Actualizar servidores</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>8. Mantenimiento preventivo busca:</strong></p>
+                <label><input type="radio" name="q8" value="a"> Actualizar contenido</label>
+                <label><input type="radio" name="q8" value="b"> Mejorar rendimiento</label>
+                <label><input type="radio" name="q8" value="c"> Solo corregir fallos</label>
+                <label><input type="radio" name="q8" value="d"> Prevenir problemas antes de que ocurran</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>9. Ejemplo de prueba de compatibilidad:</strong></p>
+                <label><input type="radio" name="q9" value="a"> Revisar tiempos de respuesta</label>
+                <label><input type="radio" name="q9" value="b"> Probar WebApp en diferentes navegadores</label>
+                <label><input type="radio" name="q9" value="c"> Revisar la seguridad del login</label>
+                <label><input type="radio" name="q9" value="d"> Simular carga de usuarios</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>10. ¿Qué describe un plan de pruebas?</strong></p>
+                <label><input type="radio" name="q10" value="a"> Cronograma del equipo de desarrollo</label>
+                <label><input type="radio" name="q10" value="b"> Manual de usuario</label>
+                <label><input type="radio" name="q10" value="c"> Casos de prueba, criterios de aceptación y criterios de salida</label>
+                <label><input type="radio" name="q10" value="d"> Especificaciones de hardware</label>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>11. Prueba de seguridad típica:</strong></p>
+                <label><input type="radio" name="q11" value="a"> Validar que login no permita contraseñas vacías</label>
+                <label><input type="radio" name="q11" value="b"> Verificar colores y tipografía</label>
+                <label><input type="radio" name="q11" value="c"> Revisar compatibilidad con navegadores</label>
+                <label><input type="radio" name="q11" value="d"> Probar velocidad de carga en móviles</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>12. Durante la implementación, ¿qué se documenta?</strong></p>
+                <label><input type="radio" name="q12" value="a"> Solo diseño visual</label>
+                <label><input type="radio" name="q12" value="b"> Configuración, despliegue y versiones del software</label>
+                <label><input type="radio" name="q12" value="c"> Manual de usuario únicamente</label>
+                <label><input type="radio" name="q12" value="d"> Ninguna documentación</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>13. Actividad típica en inspección de software:</strong></p>
+                <label><input type="radio" name="q13" value="a"> Medición de velocidad de carga</label>
+                <label><input type="radio" name="q13" value="b"> Pruebas de integración automática</label>
+                <label><input type="radio" name="q13" value="c"> Revisión manual de código y documentación</label>
+                <label><input type="radio" name="q13" value="d"> Ajuste de diseño gráfico</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>14. Prueba de usabilidad se centra en:</strong></p>
+                <label><input type="radio" name="q14" value="a"> Seguridad de datos</label>
+                <label><input type="radio" name="q14" value="b"> Compatibilidad de navegadores</label>
+                <label><input type="radio" name="q14" value="c"> Capacidad de carga del servidor</label>
+                <label><input type="radio" name="q14" value="d"> Experiencia y facilidad de uso del usuario</label>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>15. ¿Qué es clave en mantenimiento adaptativo?</strong></p>
+                <label><input type="radio" name="q15" value="a"> Ajustes por cambios en navegadores o entornos</label>
+                <label><input type="radio" name="q15" value="b"> Solo corregir errores críticos</label>
+                <label><input type="radio" name="q15" value="c"> Añadir nuevas funcionalidades sin revisión</label>
+                <label><input type="radio" name="q15" value="d"> Actualizar documentación interna únicamente</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>16–20. Preguntas de análisis</legend>
+
+            <div class="analysis">
+                <p><strong>16. Analiza cómo la planificación de V&V impacta la calidad final de una WebApp.</strong></p>
+                <textarea name="analysis1" placeholder="Escribe tu análisis aquí..."></textarea>
+            </div>
+
+            <div class="analysis">
+                <p><strong>17. Explica la importancia de la inspección de software antes de las pruebas automáticas.</strong></p>
+                <textarea name="analysis2" placeholder="Escribe tu análisis aquí..."></textarea>
+            </div>
+
+            <div class="analysis">
+                <p><strong>18. Describe cómo seleccionarías los tipos de pruebas más relevantes para un WebApp financiero.</strong></p>
+                <textarea name="analysis3" placeholder="Escribe tu análisis aquí..."></textarea>
+            </div>
+
+            <div class="analysis">
+                <p><strong>19. Analiza cómo el mantenimiento preventivo puede reducir costos a largo plazo.</strong></p>
+                <textarea name="analysis4" placeholder="Escribe tu análisis aquí..."></textarea>
+            </div>
+
+            <div class="analysis">
+                <p><strong>20. Evalúa la importancia de documentar correctamente la implementación y pruebas de una WebApp.</strong></p>
+                <textarea name="analysis5" placeholder="Escribe tu análisis aquí..."></textarea>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>21. Caso integrador — Auditoría V&V</legend>
+            <p><strong>Contexto:</strong> Una WebApp de comercio electrónico tiene problemas de seguridad, errores intermitentes y tiempos de respuesta variables.</p>
+            <p><strong>Tarea:</strong> Proponer un plan de auditoría de V&V que incluya: planificación, inspección, pruebas, análisis de resultados, evaluación de hallazgos y mantenimiento.</p>
+            <textarea name="caseIntegrator" placeholder="Escribe tu plan aquí (máx. 15 líneas)..."></textarea>
+        </fieldset>
+
+        <button type="button" class="btn-primary" onclick="evaluateMCQs()">Evaluar Opciones Múltiples</button>
+        <button type="button" class="btn-secondary" onclick="resetForm()">Reiniciar Formulario</button>
+
+        <div id="feedback"></div>
+
+    </form>
+
+    <a href="index.html">
+        <button>⟵ Regresar</button>
+    </a>
+
+</main>
+
+<footer>
+    © 2025 - TECNM CONKAL
+</footer>
+
+<script>
+function evaluateMCQs(){
+    const mcqs = document.querySelectorAll('.mcq');
+    let correct = 0;
+    const fb = document.getElementById('feedback');
+    fb.innerHTML = '';
+
+    mcqs.forEach((q, i) => {
+        const answer = q.getAttribute('data-answer');
+        const chosen = q.querySelector('input:checked');
+        const p = document.createElement('p');
+        if(chosen && chosen.value === answer){
+            correct++;
+            p.textContent = `Pregunta ${i+1}: correcta.`;
+            p.className = 'correct';
+        } else {
+            p.textContent = `Pregunta ${i+1}: incorrecta.`;
+            p.className = 'wrong';
+        }
+        fb.appendChild(p);
+    });
+
+    const r = document.createElement('h3');
+    r.textContent = `Resultado final: ${correct}/${mcqs.length} correctas.`;
+    fb.prepend(r);
+}
+
+function resetForm(){
+    document.getElementById('quizForm').reset();
+    document.getElementById('feedback').innerHTML = '';
+}
+</script>
+
+</body>
+</html>

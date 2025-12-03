@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento de las Aplicaciones Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #283E51, #4B79A1);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+        }
+        main {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #283E51;
+            border-left: 5px solid #4B79A1;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        fieldset {
+            border: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+        legend {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .mcq {
+            background: #f7f9fc;
+            border-left: 5px solid #4B79A1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .mcq label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+            color: white;
+        }
+        .btn-primary {
+            background: #4B79A1;
+        }
+        .btn-secondary {
+            background: #777;
+        }
+        #feedback {
+            margin-top: 15px;
+        }
+        .correct { color: green; }
+        .wrong { color: red; }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #283E51;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mantenimiento de las Aplicaciones Web</h1>
+</header>
+
+<main>
+
+    <h2>Introducción</h2>
+    <p>El mantenimiento de aplicaciones web es un proceso continuo que busca asegurar la disponibilidad, seguridad y correcto funcionamiento de la WebApp después de su lanzamiento. Incluye correcciones de errores, actualizaciones, mejoras y adaptación a nuevos requerimientos o tecnologías.</p>
+
+    <h2>Tipos de Mantenimiento</h2>
+    <ul>
+        <li><b>Correctivo:</b> Solución de errores y fallos detectados.</li>
+        <li><b>Adaptativo:</b> Ajustes a cambios en el entorno, como navegadores o sistemas operativos.</li>
+        <li><b>Perfectivo:</b> Mejora de funcionalidades y rendimiento.</li>
+        <li><b>Preventivo:</b> Acciones para prevenir problemas futuros.</li>
+    </ul>
+
+    <h2>Preguntas de Evaluación</h2>
+
+    <form id="quizForm">
+
+        <fieldset>
+            <legend>1–5. Preguntas de opción múltiple</legend>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>1. ¿Cuál es el objetivo principal del mantenimiento correctivo?</strong></p>
+                <label><input type="radio" name="q1" value="a"> Corregir errores y fallos detectados en la WebApp</label>
+                <label><input type="radio" name="q1" value="b"> Mejorar la experiencia del usuario</label>
+                <label><input type="radio" name="q1" value="c"> Cambiar el diseño visual</label>
+                <label><input type="radio" name="q1" value="d"> Actualizar contenido únicamente</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>2. ¿Qué implica el mantenimiento adaptativo?</strong></p>
+                <label><input type="radio" name="q2" value="a"> Eliminar errores de programación</label>
+                <label><input type="radio" name="q2" value="b"> Ajustar la WebApp a cambios en el entorno o tecnología</label>
+                <label><input type="radio" name="q2" value="c"> Mejorar la velocidad de carga solo</label>
+                <label><input type="radio" name="q2" value="d"> Solo actualizar el contenido del sitio</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>3. El mantenimiento perfectivo busca:</strong></p>
+                <label><input type="radio" name="q3" value="a"> Prevenir problemas futuros</label>
+                <label><input type="radio" name="q3" value="b"> Corregir errores críticos</label>
+                <label><input type="radio" name="q3" value="c"> Mejorar funcionalidades y rendimiento</label>
+                <label><input type="radio" name="q3" value="d"> Solo cambiar diseño visual</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>4. El mantenimiento preventivo se centra en:</strong></p>
+                <label><input type="radio" name="q4" value="a"> Corregir fallos existentes</label>
+                <label><input type="radio" name="q4" value="b"> Añadir nuevas funciones obligatorias</label>
+                <label><input type="radio" name="q4" value="c"> Mejorar diseño visual únicamente</label>
+                <label><input type="radio" name="q4" value="d"> Evitar problemas antes de que ocurran</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>5. ¿Qué herramienta es útil para monitorear el mantenimiento de una WebApp?</strong></p>
+                <label><input type="radio" name="q5" value="a"> Editor de texto</label>
+                <label><input type="radio" name="q5" value="b"> Sistema de seguimiento de incidencias (issue tracker)</label>
+                <label><input type="radio" name="q5" value="c"> Navegador web únicamente</label>
+                <label><input type="radio" name="q5" value="d"> Manual de usuario</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6–7. Preguntas abiertas</legend>
+
+            <p><strong>6. Describe cómo planificarías un mantenimiento preventivo efectivo para una WebApp crítica.</strong></p>
+            <textarea name="open1"></textarea>
+
+            <p><strong>7. Explica cómo priorizarías las tareas de mantenimiento correctivo, adaptativo y perfectivo en un proyecto real.</strong></p>
+            <textarea name="open2"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>8. Mini caso práctico</legend>
+            <p><strong>Contexto:</strong> Una WebApp de gestión de clientes presenta errores intermitentes y tiempos de respuesta lentos en horas pico.</p>
+            <p><strong>Tarea:</strong> Propón un plan de mantenimiento que incluya: 1) acciones correctivas y preventivas, 2) métricas a monitorear, 3) criterios de éxito.</p>
+            <textarea name="caseAnswer"></textarea>
+        </fieldset>
+
+        <button type="button" class="btn-primary" onclick="evaluateMCQs()">Evaluar</button>
+        <button type="button" class="btn-secondary" onclick="resetForm()">Reiniciar</button>
+
+        <div id="feedback"></div>
+    </form>
+
+    <a href="index.html">
+        <button>⟵ Regresar</button>
+    </a>
+
+</main>
+
+<footer>
+    © 2025 - TECNM CONKAL
+</footer>
+
+<script>
+function evaluateMCQs(){
+    const mcqs = document.querySelectorAll('.mcq');
+    let correct = 0;
+    const fb = document.getElementById('feedback');
+    fb.innerHTML = '';
+
+    mcqs.forEach((q, i) => {
+        const answer = q.getAttribute('data-answer');
+        const chosen = q.querySelector('input:checked');
+        const p = document.createElement('p');
+        if(chosen && chosen.value === answer){
+            correct++;
+            p.textContent = `Pregunta ${i+1}: correcta.`;
+            p.className = 'correct';
+        } else {
+            p.textContent = `Pregunta ${i+1}: incorrecta.`;
+            p.className = 'wrong';
+        }
+        fb.appendChild(p);
+    });
+
+    const r = document.createElement('h3');
+    r.textContent = `Resultado final: ${correct}/${mcqs.length} correctas.`;
+    fb.prepend(r);
+}
+
+function resetForm(){
+    document.getElementById('quizForm').reset();
+    document.getElementById('feedback').innerHTML = '';
+}
+</script>
+
+</body>
+</html>

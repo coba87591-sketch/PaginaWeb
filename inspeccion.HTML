@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspección de Software Basado en Web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #eef1f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        main {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1e3c72;
+            border-left: 5px solid #2a5298;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #1e3c72;
+            color: white;
+        }
+
+        fieldset { border: 0; margin: 12px 0; padding: 0; }
+        legend { font-weight: 600; margin-bottom: 8px; }
+        .option { margin: 6px 0; }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        pre {
+            background: #0d1321;
+            color: #e6eef8;
+            padding: 12px;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .result {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #eef6ff;
+            color: #08306a;
+        }
+
+        .wrong {
+            background: #ffecec;
+            color: #8a0b0b;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .mcq { margin-bottom: 20px; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Inspección de Software Basado en Web</h1>
+</header>
+
+<main>
+
+    <h2>¿Qué es la Inspección de Software Web?</h2>
+    <p>
+        La inspección de software basado en web es un proceso formal y sistemático utilizado para analizar 
+        el código, contenido, diseño y funcionamiento de una aplicación web con el fin de detectar errores, 
+        inconsistencias, violaciones de estándares y problemas de calidad antes de que el software sea liberado.
+    </p>
+
+    <h2>Objetivo de la Inspección</h2>
+    <p>
+        Su propósito es mejorar la calidad del software mediante la revisión detallada de sus componentes, 
+        evitando fallos costosos y garantizando que la aplicación cumpla con los requisitos funcionales, 
+        técnicos y estéticos.
+    </p>
+
+    <h2>¿Qué se inspecciona en una Aplicación Web?</h2>
+    <ul>
+        <li><b>Código fuente:</b> estructura, sintaxis, estándares y eficiencia.</li>
+        <li><b>Interfaces de usuario:</b> diseño, navegación, accesibilidad y coherencia visual.</li>
+        <li><b>Contenido:</b> textos, enlaces, recursos multimedia y metadatos.</li>
+        <li><b>Funcionalidades:</b> que las funciones trabajen como se espera.</li>
+        <li><b>Seguridad:</b> posibles vulnerabilidades o malas prácticas.</li>
+        <li><b>Compatibilidad:</b> desempeño en distintos navegadores y dispositivos.</li>
+    </ul>
+
+    <h2>Proceso de Inspección</h2>
+    <ul>
+        <li><b>1. Planificación:</b> definir qué se va a revisar y quién participará.</li>
+        <li><b>2. Análisis individual:</b> cada inspector revisa el material por separado.</li>
+        <li><b>3. Reunión de inspección:</b> se discuten los errores encontrados.</li>
+        <li><b>4. Registro de fallos:</b> se documentan problemas detectados.</li>
+        <li><b>5. Corrección:</b> el equipo de desarrollo soluciona los errores.</li>
+        <li><b>6. Verificación:</b> se revisa que las correcciones estén bien aplicadas.</li>
+    </ul>
+
+    <h2>Tipos de Problemas que Puede Detectar</h2>
+    <ul>
+        <li>Errores de programación</li>
+        <li>Fallas de diseño o navegación</li>
+        <li>Problemas de rendimiento</li>
+        <li>Vulnerabilidades de seguridad</li>
+        <li>Enlaces rotos o contenido desactualizado</li>
+        <li>Incompatibilidades entre navegadores</li>
+    </ul>
+
+    <h2>Beneficios de la Inspección Web</h2>
+    <ul>
+        <li>Mejora significativa de la calidad del software</li>
+        <li>Reducción de costos por correcciones tardías</li>
+        <li>Mayor seguridad y estabilidad</li>
+        <li>Optimización de rendimiento y experiencia de usuario</li>
+        <li>Cumplimiento de estándares de desarrollo web</li>
+    </ul>
+
+    <img src="https://es.abstracta.us/wp-content/uploads/2021/11/software-testing-wheel-abstracta-1024x974.png" width="600" height="550" alt="Imagen pequeña">
+
+    <h1>Evaluación — Inspección de Software Basado en Web</h1>
+    <p>Responde las preguntas sobre inspección, revisión y análisis estático en sistemas web.</p>
+
+    <form id="quizForm" onsubmit="return false;">
+
+        <fieldset>
+            <legend>1–5. Preguntas de opción múltiple</legend>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>1.</strong> ¿Cuál es el propósito principal de una inspección de software web?</p>
+                <div class="option"><input type="radio" name="q1" value="a"> Identificar defectos antes de la ejecución del software.</div>
+                <div class="option"><input type="radio" name="q1" value="b"> Medir el rendimiento bajo carga.</div>
+                <div class="option"><input type="radio" name="q1" value="c"> Ejecutar pruebas automatizadas.</div>
+                <div class="option"><input type="radio" name="q1" value="d"> Realizar encuestas a usuarios finales.</div>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>2.</strong> ¿Qué rol es indispensable dentro del equipo de inspección?</p>
+                <div class="option"><input type="radio" name="q2" value="a"> Diseñador UI.</div>
+                <div class="option"><input type="radio" name="q2" value="b"> Administrador del servidor.</div>
+                <div class="option"><input type="radio" name="q2" value="c"> Moderador o líder de la inspección.</div>
+                <div class="option"><input type="radio" name="q2" value="d"> Usuario final externo.</div>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>3.</strong> ¿Qué documento es fundamental para iniciar una inspección?</p>
+                <div class="option"><input type="radio" name="q3" value="a"> Manual de instalación.</div>
+                <div class="option"><input type="radio" name="q3" value="b"> Reporte de ventas.</div>
+                <div class="option"><input type="radio" name="q3" value="c"> Log del servidor.</div>
+                <div class="option"><input type="radio" name="q3" value="d"> Artefacto a inspeccionar (código, requisitos o diseño).</div>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>4.</strong> En una inspección web, ¿qué tipo de defecto es más común?</p>
+                <div class="option"><input type="radio" name="q4" value="a"> Fallos de hardware.</div>
+                <div class="option"><input type="radio" name="q4" value="b"> Inconsistencias entre reglas de negocio y lógica implementada.</div>
+                <div class="option"><input type="radio" name="q4" value="c"> Problemas eléctricos.</div>
+                <div class="option"><input type="radio" name="q4" value="d"> Errores por calentamiento del CPU.</div>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>5.</strong> ¿Qué ventaja principal ofrecen las inspecciones frente a las pruebas dinámicas?</p>
+                <div class="option"><input type="radio" name="q5" value="a"> Detectan errores temprano sin necesidad de ejecutar el software.</div>
+                <div class="option"><input type="radio" name="q5" value="b"> Requieren menos personal técnico.</div>
+                <div class="option"><input type="radio" name="q5" value="c"> Miden rendimiento del sistema web.</div>
+                <div class="option"><input type="radio" name="q5" value="d"> Son más rápidas que cualquier otro método.</div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>6–7. Preguntas abiertas</legend>
+
+            <p><strong>6.</strong> Explica las etapas principales de una inspección de software basado en web (máx. 6 líneas).</p>
+            <textarea></textarea>
+
+            <p><strong>7.</strong> Describe tres beneficios concretos de aplicar inspecciones en código HTML, CSS o JavaScript antes de ejecutar la WebApp.</p>
+            <textarea></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>8. Mini caso práctico</legend>
+
+            <p><strong>Contexto:</strong> Una aplicación web presenta errores visuales y fallos de validación en formularios. El gerente solicita una inspección para detectar defectos antes de avanzar con pruebas dinámicas.</p>
+
+            <p><strong>Tarea:</strong> En máximo 10 líneas, redacta un plan de inspección que incluya: 1) qué artefactos revisar, 2) qué tipos de defectos buscar, 3) criterios para aprobar la inspección.</p>
+
+            <pre>
+Revisar: HTML del formulario, validaciones JS, hojas de estilo.
+Buscar: etiquetas mal anidadas, validaciones ausentes, estilos que rompen layout.
+Criterio de aprobación: sin defectos críticos y máximo 3 defectos menores.
+            </pre>
+
+            <textarea placeholder="Escribe tu plan aquí..."></textarea>
+        </fieldset>
+
+        <button class="btn btn-primary" onclick="evaluateMCQs()">Evaluar</button>
+        <button class="btn" type="button" onclick="resetForm()">Reiniciar</button>
+
+        <div id="feedback"></div>
+
+    </form>
+
+    <a href="index.html">
+        <button class="btn">⟵ Regresar</button>
+    </a>
+
+</main>
+
+<footer>
+    © 2025 - TECNM CONKAL
+</footer>
+
+<script>
+function evaluateMCQs(){
+  const mcqs = document.querySelectorAll('.mcq');
+  let correct = 0;
+  const fb = document.getElementById('feedback');
+  fb.innerHTML = '';
+
+  mcqs.forEach((q, i)=>{
+    const ans = q.dataset.answer;
+    const chosen = q.querySelector('input:checked');
+    const p = document.createElement('p');
+    if(chosen && chosen.value === ans){ correct++; p.textContent = `Pregunta ${i+1}: correcta.`; }
+    else{ p.textContent = `Pregunta ${i+1}: incorrecta.`; p.className='wrong'; }
+    fb.appendChild(p);
+  });
+
+  const r = document.createElement('div');
+  r.className = 'result';
+  r.textContent = `Resultado: ${correct}/${mcqs.length} correctas.`;
+  fb.prepend(r);
+}
+
+function resetForm(){
+  document.getElementById('quizForm').reset();
+  document.getElementById('feedback').innerHTML='';
+}
+</script>
+
+</body>
+</html>

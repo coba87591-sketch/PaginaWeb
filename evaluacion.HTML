@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de las Aplicaciones Web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #283E51, #4B79A1);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+        }
+
+        main {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #283E51;
+            border-left: 5px solid #4B79A1;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        fieldset {
+            border: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        legend {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .mcq {
+            background: #f7f9fc;
+            border-left: 5px solid #4B79A1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .mcq label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+            color: white;
+        }
+
+        .btn-primary {
+            background: #4B79A1;
+        }
+
+        .btn-secondary {
+            background: #777;
+        }
+
+        #feedback {
+            margin-top: 15px;
+        }
+
+        .correct { color: green; }
+        .wrong { color: red; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #283E51;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Evaluación de las Aplicaciones Web</h1>
+</header>
+
+<main>
+
+    <h2>Introducción</h2>
+    <p>La evaluación de aplicaciones web es un proceso clave para garantizar que el software cumpla con los estándares de calidad, funcionalidad, rendimiento, seguridad y usabilidad. Esta etapa permite identificar mejoras y asegurar que los usuarios tengan una experiencia satisfactoria.</p>
+
+    <h2>Aspectos Clave de la Evaluación</h2>
+    <ul>
+        <li><b>Funcionalidad:</b> Verificar que todas las funciones trabajan como se espera.</li>
+        <li><b>Usabilidad:</b> Evaluar la facilidad de uso y la experiencia del usuario.</li>
+        <li><b>Rendimiento:</b> Medir tiempos de respuesta, carga y estrés.</li>
+        <li><b>Seguridad:</b> Detectar vulnerabilidades y garantizar protección de datos.</li>
+        <li><b>Compatibilidad:</b> Confirmar que la aplicación funciona en diferentes dispositivos y navegadores.</li>
+    </ul>
+
+    <h2>Preguntas de Evaluación</h2>
+
+    <form id="quizForm">
+
+        <fieldset>
+            <legend>1–5. Preguntas de opción múltiple</legend>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>1. ¿Qué se evalúa en la prueba de funcionalidad?</strong></p>
+                <label><input type="radio" name="q1" value="a"> Que todas las funciones de la WebApp trabajen correctamente</label>
+                <label><input type="radio" name="q1" value="b"> La apariencia visual únicamente</label>
+                <label><input type="radio" name="q1" value="c"> El tiempo que tarda en cargar el servidor</label>
+                <label><input type="radio" name="q1" value="d"> Solo la seguridad</label>
+            </div>
+
+            <div class="mcq" data-answer="b">
+                <p><strong>2. Una prueba de usabilidad busca:</strong></p>
+                <label><input type="radio" name="q2" value="a"> Medir cuántos usuarios soporta el servidor</label>
+                <label><input type="radio" name="q2" value="b"> Evaluar facilidad de navegación y experiencia de usuario</label>
+                <label><input type="radio" name="q2" value="c"> Verificar compatibilidad con APIs</label>
+                <label><input type="radio" name="q2" value="d"> Probar la seguridad de contraseñas</label>
+            </div>
+
+            <div class="mcq" data-answer="d">
+                <p><strong>3. La evaluación de seguridad se realiza para:</strong></p>
+                <label><input type="radio" name="q3" value="a"> Medir satisfacción del usuario</label>
+                <label><input type="radio" name="q3" value="b"> Ajustar colores y diseño visual</label>
+                <label><input type="radio" name="q3" value="c"> Solo comprobar que el servidor responde</label>
+                <label><input type="radio" name="q3" value="d"> Detectar vulnerabilidades y proteger datos sensibles</label>
+            </div>
+
+            <div class="mcq" data-answer="c">
+                <p><strong>4. La prueba de compatibilidad busca:</strong></p>
+                <label><input type="radio" name="q4" value="a"> Verificar funciones internas de la base de datos</label>
+                <label><input type="radio" name="q4" value="b"> Medir tiempo de carga en un solo navegador</label>
+                <label><input type="radio" name="q4" value="c"> Confirmar que la WebApp funciona en múltiples navegadores y dispositivos</label>
+                <label><input type="radio" name="q4" value="d"> Solo analizar la seguridad</label>
+            </div>
+
+            <div class="mcq" data-answer="a">
+                <p><strong>5. Una evaluación de rendimiento se centra en:</strong></p>
+                <label><input type="radio" name="q5" value="a"> Tiempos de respuesta, carga y resistencia del sistema</label>
+                <label><input type="radio" name="q5" value="b"> Diseño visual únicamente</label>
+                <label><input type="radio" name="q5" value="c"> Experiencia del usuario</label>
+                <label><input type="radio" name="q5" value="d"> Integración de APIs externas</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6–7. Preguntas abiertas</legend>
+
+            <p><strong>6. Describe en 5 líneas cómo realizarías una evaluación completa de una WebApp antes de su lanzamiento.</strong></p>
+            <textarea name="open1" placeholder="Escribe tu respuesta aquí..."></textarea>
+
+            <p><strong>7. Explica cómo priorizarías los hallazgos de seguridad, rendimiento y usabilidad para corregirlos de manera efectiva.</strong></p>
+            <textarea name="open2" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>8. Mini caso práctico</legend>
+            <p><strong>Contexto:</strong> Una WebApp de reservas online presenta lentitud en carga y errores de compatibilidad en algunos navegadores.</p>
+            <p><strong>Tarea:</strong> Propón un plan de evaluación que incluya: 1) pruebas a realizar, 2) métricas a monitorear, 3) criterios para considerar que la WebApp cumple los estándares.</p>
+            <textarea name="caseAnswer" placeholder="Escribe tu plan aquí (máx. 10 líneas)"></textarea>
+        </fieldset>
+
+        <button type="button" class="btn btn-primary" onclick="evaluateMCQs()">Evaluar</button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">Reiniciar</button>
+
+        <div id="feedback"></div>
+    </form>
+
+    <!-- Botón corregido -->
+    <a href="index.html">
+        <button>⟵ Regresar</button>
+    </a>
+
+</main>
+
+<footer>
+    © 2025 - TECNM CONKAL
+</footer>
+
+<script>
+function evaluateMCQs(){
+    const mcqs = document.querySelectorAll('.mcq');
+    let correct = 0;
+    const fb = document.getElementById('feedback');
+    fb.innerHTML = '';
+
+    mcqs.forEach((q, i) => {
+        const answer = q.getAttribute('data-answer');
+        const chosen = q.querySelector('input:checked');
+        const p = document.createElement('p');
+        if(chosen && chosen.value === answer){
+            correct++;
+            p.textContent = `Pregunta ${i+1}: correcta.`;
+            p.className = 'correct';
+        } else {
+            p.textContent = `Pregunta ${i+1}: incorrecta.`;
+            p.className = 'wrong';
+        }
+        fb.appendChild(p);
+    });
+
+    const r = document.createElement('h3');
+    r.textContent = `Resultado final: ${correct}/${mcqs.length} correctas.`;
+    fb.prepend(r);
+}
+
+function resetForm(){
+    document.getElementById('quizForm').reset();
+    document.getElementById('feedback').innerHTML = '';
+}
+</script>
+
+</body>
+</html>
